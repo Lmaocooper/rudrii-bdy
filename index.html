@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>For Rudri — a little universe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain"></div>
+<div id="app">
+  <section class="chapter opening active" id="opening">
+    <div class="opening-world">
+      <div class="royal-glow"></div>
+      <div class="tiny-crown">✦</div>
+      <div class="photo-behind" id="openingPhoto"><div class="photo-placeholder">RUDRI<br><span>your photo</span></div></div>
+      <div class="foil-paper" id="foilPaper">
+        <div class="foil-shine"></div><div class="paper-grain"></div>
+        <div class="paper-copy"><span>FOR</span><strong>RUDRI</strong><small>open gently</small></div>
+      </div>
+      <div class="tap-note" id="tapNote">tap the paper</div>
+      <div class="birthday-reveal" id="birthdayReveal"><span class="eyebrow">a tiny universe made for</span><h1>Rudri<span>♥</span></h1><p>happy birthday, you.</p><button class="continue" data-next="code">enter →</button></div>
+    </div>
+  </section>
+
+  <section class="chapter code" id="code">
+    <div class="code-paper">
+      <span class="eyebrow">the little lock</span><h2>Some things are<br><i>only for you.</i></h2>
+      <p>four numbers. you know them.</p>
+      <div class="dots" id="dots"><i></i><i></i><i></i><i></i></div>
+      <div class="keypad" id="keypad"></div>
+      <div class="code-msg" id="codeMsg">hint: you really do know this one.</div>
+    </div>
+  </section>
+
+  <section class="chapter record" id="record">
+    <div class="record-top"><div><span class="eyebrow">RUDRI'S</span><h2>Record Club</h2><p>songs that feel a little like you.</p></div><div class="club-stamp">R<br>C<br>★</div></div>
+    <div class="record-shell">
+      <div class="playlist-head"><div class="mini-vinyl">◉</div><div><strong>Rudri's little collection</strong><span>9 songs · made with questionable amounts of affection</span></div></div>
+      <div class="tracks" id="tracks"></div>
+      <div class="locked"><div class="lock-line"></div><span>there's more downstairs…</span><div class="lock-fade"></div><button id="spotifyBtn">♡ open the full playlist</button></div>
+    </div>
+    <button class="continue dark" data-next="music">continue →</button>
+  </section>
+
+  <section class="chapter music" id="music">
+    <div class="music-bg" id="musicBg"></div><div class="music-decor d1">✦</div><div class="music-decor d2">✧</div><div class="music-decor d3">☾</div>
+    <div class="music-header"><span id="musicCount">01 / 07</span><span>RUDRI'S SONGBOOK</span></div>
+    <button class="arrow left" id="prevSong">‹</button><button class="arrow right" id="nextSong">›</button>
+    <div class="song-card" id="songCard"><div class="photo-frame"><div class="photo-placeholder large">RUDRI<br><span>song photo</span></div><div class="frame-caption">a little moment</div></div><div class="song-meta"><span class="eyebrow" id="songMood">dreamy</span><h2 id="songTitle">Song One</h2><p id="songArtist">Artist</p></div><div class="player"><div class="player-time"><span>0:00</span><span id="duration">0:00</span></div><div class="progress"><i id="progress"></i></div><div class="controls"><button>↶</button><button class="play" id="playBtn">▶</button><button>↷</button></div></div></div>
+    <button class="continue light" data-next="bouquet">leave the songbook →</button>
+  </section>
+
+  <section class="chapter bouquet" id="bouquet">
+    <div class="bouquet-world"><span class="eyebrow">a bouquet of little things</span><h2>pick a flower.<br><i>find a memory.</i></h2><p class="bouquet-sub">every flower keeps something she once did.</p>
+      <div class="bouquet-stage" id="bouquetStage">
+        <div class="wrap wrap-back"></div><div class="wrap wrap-front"></div><div class="stem s1"></div><div class="stem s2"></div><div class="stem s3"></div><div class="stem s4"></div><div class="stem s5"></div>
+        <button class="flower f1" data-memory="0"><span></span></button><button class="flower f2" data-memory="1"><span></span></button><button class="flower f3" data-memory="2"><span></span></button><button class="flower f4" data-memory="3"><span></span></button><button class="flower f5" data-memory="4"><span></span></button><button class="flower f6" data-memory="5"><span></span></button><button class="flower f7" data-memory="6"><span></span></button><div class="baby-breath"></div>
+      </div>
+      <button class="continue" data-next="letter">take the bouquet with you →</button>
+    </div>
+    <div class="memory-modal" id="memoryModal"><button class="close" id="closeMemory">×</button><div class="memory-art"><div class="sketch-person"></div><div class="sketch-object"></div></div><span class="eyebrow" id="memoryNo">memory 01</span><h3 id="memoryTitle">Two watches.</h3><p id="memoryText">She once wore two watches, one on each hand, and announced that she now had more time than everyone else.</p></div>
+  </section>
+
+  <section class="chapter letter" id="letter"><div class="letter-bg"><div class="envelope" id="envelope"><div class="env-back"></div><div class="env-front"></div><div class="seal" id="seal">R</div><div class="env-name">for rudri</div></div><div class="letter-sheet" id="letterSheet"><div class="sheet-inner"><div class="letter-head"><span>october 02</span><span>for R.</span></div><h2>Dear Rudri,</h2><p class="drop">There are people who arrive in your life loudly, and then there are people who somehow become part of the furniture of your heart.</p><p>This is a very long way of saying: I am really, really glad you exist.</p><p>So I made you a little place on the internet. Not because the internet needs another website, obviously, but because you deserve something that feels handmade.</p><p>Something you can wander through.</p><p>Something that keeps little pieces of you safe.</p><p>And because I know you, there are going to be things here that make you laugh, things that make you roll your eyes, and probably at least one thing that makes you say, “what is wrong with you?”</p><p class="signature">— me, obviously</p></div></div><button class="continue letter-next" data-next="credits">close the letter →</button></div></section>
+
+  <section class="chapter credits" id="credits"><div class="credits-world"><div class="credit-stars">✦　·　✧　·　✦</div><span class="eyebrow">the credits</span><h2>starring</h2><div class="name-run"><span>Rudri</span><span>Rudriii</span><span>Rudriiiii</span><span>Rudriiiiiiiii</span><span>Rudriiiiiiiiiiiiiiiiiiiii</span></div><div class="stats"><div><b>people made smile</b><strong>10,000,000,000</strong></div><div><b>my love for you</b><strong>∞</strong></div><div><b>times you are allowed to complain</b><strong>unfortunately unlimited</strong></div></div><p class="final-line">happy birthday, rudri.<br>keep being exactly this strange, wonderful person.</p><div class="tiny-crown">✦</div></div></section>
+</div>
+<script src="script.js"></script>
+</body></html>
