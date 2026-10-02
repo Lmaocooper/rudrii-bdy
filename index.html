@@ -1,71 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>For Rudri — a little universe</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#3d0718"><meta name="description" content="A handmade birthday story for Rudri.">
+  <title>For Rudri — a little universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=16">
 </head>
 <body>
-<div class="grain"></div>
-<div id="app">
-  <section class="chapter opening active" id="opening">
-    <div class="opening-world">
-      <div class="royal-glow"></div>
-      <div class="tiny-crown">✦</div>
-      <div class="photo-behind" id="openingPhoto"><div class="photo-placeholder">RUDRI<br><span>your photo</span></div></div>
-      <div class="foil-paper" id="foilPaper">
-        <div class="foil-shine"></div><div class="paper-grain"></div>
-        <div class="paper-copy"><span>FOR</span><strong>RUDRI</strong><small>open gently</small></div>
-      </div>
-      <div class="tap-note" id="tapNote">tap the paper</div>
-      <div class="birthday-reveal" id="birthdayReveal"><span class="eyebrow">a tiny universe made for</span><h1>Rudri<span>♥</span></h1><p>happy birthday, you.</p><button class="continue" data-next="code">enter →</button></div>
+<div class="grain" aria-hidden="true"></div><div id="app">
+  <section class="chapter opening active" id="opening" aria-label="Birthday opening">
+    <div class="opening-world"><div class="opening-light"></div><div class="opening-kicker">A SMALL THING, MADE BY HAND</div>
+      <div class="photo-behind"><div class="portrait-window"><img src="assets/photos/093295E0-BBF6-491E-932E-D5207CBC9B6C.JPG" alt="Rudri at her birthday table"></div><span class="portrait-caption">a day worth keeping</span></div>
+      <div class="pink-ground" aria-hidden="true"></div>
+      <button class="foil-paper" id="foilPaper" aria-label="Reveal the birthday cake"><span class="paper-fibre"></span><span class="paper-seam"></span><span class="paper-copy"><small>A PAGE FOR</small><strong>RUDRI</strong><i>made with love</i><b>On this day, a shoni was born.</b></span></button>
+      <button class="cake-trigger" id="cakeTrigger" aria-label="Lift the birthday cake"><img src="assets/stickers/image(20261001-154022).png" alt="Birthday cake"></button>
+      <div class="tap-note" id="tapNote">lift the cake</div>
     </div>
   </section>
-
-  <section class="chapter code" id="code">
-    <div class="code-paper">
-      <span class="eyebrow">the little lock</span><h2>Some things are<br><i>only for you.</i></h2>
-      <p>four numbers. you know them.</p>
-      <div class="dots" id="dots"><i></i><i></i><i></i><i></i></div>
-      <div class="keypad" id="keypad"></div>
-      <div class="code-msg" id="codeMsg">hint: you really do know this one.</div>
-    </div>
+  <section class="chapter code" id="code" aria-label="Four digit lock"><button class="back" data-back="opening">← back</button><div class="code-paper paper"><span class="eyebrow">A LITTLE LOCK</span><h2>Some things are<br><i>only for you.</i></h2><p>Four numbers.</p><div class="dots" id="dots" aria-label="Code entry"><i></i><i></i><i></i><i></i></div><div class="keypad" id="keypad" aria-label="Number pad"></div><div class="code-msg" id="codeMsg" aria-live="polite"></div></div></section>
+  <section class="chapter music world-0" id="music" aria-label="Seven song story"><button class="back back-light" data-back="code">← back</button><div class="music-header"><span id="musicCount">01 / 07</span><span>RUDRI'S SONGBOOK</span></div><div class="music-atmosphere" aria-hidden="true"><i class="orb"></i><i class="moon"></i><i class="pressed-leaf">✧</i><i class="film-mark">MEMORY NO. <b>01</b></i></div><button class="arrow left" id="prevSong" aria-label="Previous song">‹</button><button class="arrow right" id="nextSong" aria-label="Next song">›</button>
+    <div class="song-card"><div class="photo-frame"><img id="songPhoto" src="" alt="Rudri"><div class="frame-caption">a little moment</div></div><div class="song-meta"><span class="eyebrow" id="songMood"></span><h2 id="songTitle"></h2><p id="songArtist"></p></div><div class="player"><div class="player-time"><span id="currentTime">0:00</span><span id="duration">—:—</span></div><input class="progress" id="progress" type="range" min="0" max="100" value="0" aria-label="Song progress"><div class="controls"><button id="rewindBtn" aria-label="Rewind 10 seconds">↶<small>10</small></button><button class="play" id="playBtn" aria-label="Play">▶</button><button id="forwardBtn" aria-label="Forward 10 seconds">↷<small>10</small></button></div></div></div><button class="continue light" data-next="record">leave the songbook <span>→</span></button><span class="music-note" id="musicNote" aria-live="polite"></span>
   </section>
-
-  <section class="chapter record" id="record">
-    <div class="record-top"><div><span class="eyebrow">RUDRI'S</span><h2>Record Club</h2><p>songs that feel a little like you.</p></div><div class="club-stamp">R<br>C<br>★</div></div>
-    <div class="record-shell">
-      <div class="playlist-head"><div class="mini-vinyl">◉</div><div><strong>Rudri's little collection</strong><span>9 songs · made with questionable amounts of affection</span></div></div>
-      <div class="tracks" id="tracks"></div>
-      <div class="locked"><div class="lock-line"></div><span>there's more downstairs…</span><div class="lock-fade"></div><button id="spotifyBtn">♡ open the full playlist</button></div>
-    </div>
-    <button class="continue dark" data-next="music">continue →</button>
+  <section class="chapter record" id="record"><button class="back" data-back="music">← songbook</button><div class="record-top"><div><span class="eyebrow">RUDRI'S</span><h2>Record Club</h2><p>A paper archive of songs that feel like you.</p></div><div class="club-stamp">EST.<br>0210<br>✦</div></div><div class="record-shell"><div class="playlist-head"><span class="record-tab">SIDE A</span><div><strong>Seven songs, kept close</strong><span>with a few still tucked away</span></div></div><div class="tracks" id="tracks"></div><div class="locked"><div class="lock-line"></div><span>the back pocket is still locked</span><a id="spotifyBtn" class="spotify-link" href="https://open.spotify.com/playlist/7apVgBVFrDhUsOi96ANY9h?si=b5d78c7896d5424e&amp;pt=59c6adea1cbaa1790d9e50d3c5910279" target="_blank" rel="noopener" aria-label="Open Spotify playlist"><span class="spotify-mark" aria-hidden="true">◉</span> Want the full playlist?</a></div></div><button class="continue dark" data-next="booth">turn the page <span>→</span></button></section>
+  <section class="chapter booth" id="booth"><button class="back" data-back="record">← record club</button><div class="booth-content"><span class="eyebrow">THE PHOTO BOOTH</span><div class="booth-frame"><div class="film-reel"><div class="film-perfs" aria-hidden="true"></div><div class="booth-strip"><div class="film-empty" role="button" tabindex="0"><img loading="lazy" decoding="async" src="assets/photobooth/ChatGPT Image Oct 2, 2026, 04_53_27 PM.jpg" alt="Photo booth memory 01"><span>PHOTO 01</span></div><div class="film-empty" role="button" tabindex="0"><img loading="lazy" decoding="async" src="assets/photobooth/ChatGPT Image Oct 2, 2026, 04_53_32 PM.jpg" alt="Photo booth memory 02"><span>PHOTO 02</span></div><div class="film-empty" role="button" tabindex="0"><img loading="lazy" decoding="async" src="assets/photobooth/ChatGPT Image Oct 2, 2026, 04_53_36 PM.jpg" alt="Photo booth memory 03"><span>PHOTO 03</span></div><div class="film-empty" role="button" tabindex="0"><img loading="lazy" decoding="async" src="assets/photobooth/ChatGPT Image Oct 2, 2026, 04_53_41 PM.jpg" alt="Photo booth memory 04"><span>PHOTO 04</span></div><div class="film-empty" role="button" tabindex="0"><img loading="lazy" decoding="async" src="assets/photobooth/ChatGPT Image Oct 2, 2026, 04_53_46 PM.jpg" alt="Photo booth memory 05"><span>PHOTO 05</span></div><div class="film-date">R. + P. - A LITTLE ARCHIVE</div></div><div class="film-perfs" aria-hidden="true"></div></div><span class="booth-caption">a strip saved for later</span></div><h2>More memories<br><i>coming into focus.</i></h2><p>Five frames from the photo booth.</p><button class="continue" data-next="bouquet">find the bouquet <span>→</span></button></div></section>
+  <section class="chapter bouquet" id="bouquet"><button class="back" data-back="booth">← photo booth</button><div class="bouquet-world"><span class="eyebrow">A BOUQUET OF LITTLE THINGS</span><h2>Pick a flower.<br><i>Find a memory.</i></h2><p class="bouquet-sub">Six little windows into the Rudri archive.</p><div class="bouquet-stage" id="bouquetStage"><img class="bouquet-photo" src="assets/stickers/image(1).png" alt="A bouquet of flowers"><button class="flower-pin f1" data-memory="0" aria-label="Two watches">✦</button><button class="flower-pin f2" data-memory="1" aria-label="Ice cream">✦</button><button class="flower-pin f3" data-memory="2" aria-label="Childhood">✦</button><button class="flower-pin f4" data-memory="3" aria-label="Laboons">✦</button><button class="flower-pin f5" data-memory="4" aria-label="Stars">✦</button><button class="flower-pin f6" data-memory="5" aria-label="Kitchen">✦</button></div><button class="math-stamp" id="mathStamp" type="button">? a little question ✦</button><button class="continue" data-next="letter">take the bouquet with you <span>→</span></button></div>
+    <div class="memory-modal paper" id="memoryModal" role="dialog" aria-modal="true" aria-labelledby="memoryTitle"><button class="close" id="closeMemory" aria-label="Close memory">×</button><div class="memory-art" id="memoryArt"></div><span class="eyebrow" id="memoryNo">MEMORY 01</span><h3 id="memoryTitle"></h3><p id="memoryText"></p></div>
   </section>
-
-  <section class="chapter music" id="music">
-    <div class="music-bg" id="musicBg"></div><div class="music-decor d1">✦</div><div class="music-decor d2">✧</div><div class="music-decor d3">☾</div>
-    <div class="music-header"><span id="musicCount">01 / 07</span><span>RUDRI'S SONGBOOK</span></div>
-    <button class="arrow left" id="prevSong">‹</button><button class="arrow right" id="nextSong">›</button>
-    <div class="song-card" id="songCard"><div class="photo-frame"><div class="photo-placeholder large">RUDRI<br><span>song photo</span></div><div class="frame-caption">a little moment</div></div><div class="song-meta"><span class="eyebrow" id="songMood">dreamy</span><h2 id="songTitle">Song One</h2><p id="songArtist">Artist</p></div><div class="player"><div class="player-time"><span>0:00</span><span id="duration">0:00</span></div><div class="progress"><i id="progress"></i></div><div class="controls"><button>↶</button><button class="play" id="playBtn">▶</button><button>↷</button></div></div></div>
-    <button class="continue light" data-next="bouquet">leave the songbook →</button>
-  </section>
-
-  <section class="chapter bouquet" id="bouquet">
-    <div class="bouquet-world"><span class="eyebrow">a bouquet of little things</span><h2>pick a flower.<br><i>find a memory.</i></h2><p class="bouquet-sub">every flower keeps something she once did.</p>
-      <div class="bouquet-stage" id="bouquetStage">
-        <div class="wrap wrap-back"></div><div class="wrap wrap-front"></div><div class="stem s1"></div><div class="stem s2"></div><div class="stem s3"></div><div class="stem s4"></div><div class="stem s5"></div>
-        <button class="flower f1" data-memory="0"><span></span></button><button class="flower f2" data-memory="1"><span></span></button><button class="flower f3" data-memory="2"><span></span></button><button class="flower f4" data-memory="3"><span></span></button><button class="flower f5" data-memory="4"><span></span></button><button class="flower f6" data-memory="5"><span></span></button><button class="flower f7" data-memory="6"><span></span></button><div class="baby-breath"></div>
-      </div>
-      <button class="continue" data-next="letter">take the bouquet with you →</button>
-    </div>
-    <div class="memory-modal" id="memoryModal"><button class="close" id="closeMemory">×</button><div class="memory-art"><div class="sketch-person"></div><div class="sketch-object"></div></div><span class="eyebrow" id="memoryNo">memory 01</span><h3 id="memoryTitle">Two watches.</h3><p id="memoryText">She once wore two watches, one on each hand, and announced that she now had more time than everyone else.</p></div>
-  </section>
-
-  <section class="chapter letter" id="letter"><div class="letter-bg"><div class="envelope" id="envelope"><div class="env-back"></div><div class="env-front"></div><div class="seal" id="seal">R</div><div class="env-name">for rudri</div></div><div class="letter-sheet" id="letterSheet"><div class="sheet-inner"><div class="letter-head"><span>october 02</span><span>for R.</span></div><h2>Dear Rudri,</h2><p class="drop">There are people who arrive in your life loudly, and then there are people who somehow become part of the furniture of your heart.</p><p>This is a very long way of saying: I am really, really glad you exist.</p><p>So I made you a little place on the internet. Not because the internet needs another website, obviously, but because you deserve something that feels handmade.</p><p>Something you can wander through.</p><p>Something that keeps little pieces of you safe.</p><p>And because I know you, there are going to be things here that make you laugh, things that make you roll your eyes, and probably at least one thing that makes you say, “what is wrong with you?”</p><p class="signature">— me, obviously</p></div></div><button class="continue letter-next" data-next="credits">close the letter →</button></div></section>
-
-  <section class="chapter credits" id="credits"><div class="credits-world"><div class="credit-stars">✦　·　✧　·　✦</div><span class="eyebrow">the credits</span><h2>starring</h2><div class="name-run"><span>Rudri</span><span>Rudriii</span><span>Rudriiiii</span><span>Rudriiiiiiiii</span><span>Rudriiiiiiiiiiiiiiiiiiiii</span></div><div class="stats"><div><b>people made smile</b><strong>10,000,000,000</strong></div><div><b>my love for you</b><strong>∞</strong></div><div><b>times you are allowed to complain</b><strong>unfortunately unlimited</strong></div></div><p class="final-line">happy birthday, rudri.<br>keep being exactly this strange, wonderful person.</p><div class="tiny-crown">✦</div></div></section>
+  <section class="chapter letter" id="letter" aria-label="Sealed birthday letter"><button class="back back-light" data-back="bouquet">&larr; bouquet</button><div class="letter-stage"><div class="envelope" id="envelope"><div class="env-back"></div><div class="env-letter"></div><div class="env-flap"></div><div class="env-front"></div><button class="seal" id="seal" type="button" aria-label="Break the wax seal">R</button><span class="env-name">for Rudri</span><span class="envelope-hint">tap the wax seal</span></div><article class="letter-sheet" id="letterSheet"><div class="sheet-inner"><div class="letter-head"><span>A LETTER FOR YOU</span><span>SEALED</span></div><h2>Dear Rudri,</h2><p>Oh, you thought I was actually going to let you read this already? &#x1F440;</p><p>Some things need a little more time to become the right words.</p><p>Come back on October 4th. &#x1F5DD;&#xFE0F;&#x1F440;</p><p>I'll have something waiting for you.</p></div></article><div class="letter-audio-controller" id="letterAudioController" hidden><button id="letterPlay" type="button" aria-label="Play Enchanted">PLAY</button><input id="letterVolume" type="range" min="0" max="1" step="0.05" value="0.7" aria-label="Letter music volume"></div><button class="continue letter-next" data-next="credits">continue <span>&rarr;</span></button></div></section>
+  <section class="chapter credits" id="credits" aria-label="Rolling end credits"><button class="back back-light" data-back="letter">&larr; letter</button><div class="credits-window"><div class="credits-roll"><p class="eyebrow">A FILM BY SOMEONE WHO ADORES YOU</p><h2>THE RUDRI PICTURE</h2><p>Starring</p><strong>Rudri, as herself</strong><p>Made people laugh</p><strong>1000000</strong><p>Made people feel safe</p><strong>every single time</strong><p>Professional overthinker</p><strong>certified</strong><p>Good luck charm</p><strong>100%</strong><p>Tiny chaos generator</p><strong>unlimited</strong><p>Keeper of the laboons</p><strong>Rudri</strong><p>Rudri<br>Rudriii<br>Rudriiiii<br>Rudriiiiiiiii<br>Rudriiiiiiiiiiiiiiiiiiiiiiiii<br>Rudriiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii<br>Rudriiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii<br>...and still going</p><p>My Love for You - infinity</p><p>Made with all my love</p></div></div><button class="skip-credits" id="skipCredits">skip to final message &rarr;</button></section>
+  <section class="chapter finale" id="finale" aria-label="Final birthday message"><button class="back back-light" data-back="credits">&larr; credits</button><div class="finale-content"><span class="eyebrow">THE END, FOR NOW</span><h2>Hu Tane Prem Karu Chu maari Baakdudi &#x1F380;&#x1F380;</h2><p>I'll always be yours</p><p>- Mr.Agarwal jiiiii</p><button class="continue" id="restart">start again <span>&#8635;</span></button></div></section>
 </div>
-<script src="script.js"></script>
-</body></html>
+<dialog class="booth-lightbox" id="boothLightbox" aria-label="Photo booth photograph"><button class="lightbox-close" id="closeLightbox" type="button" aria-label="Close photo">Close</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></dialog>
+<div id="frostToast" class="frost-toast" role="status" aria-live="polite"><img class="frost-photo" src="assets/frost/ChatGPT Image Oct 2, 2026, 04_06_42 PM.jpg" alt="Frost"><span class="paw">🐾</span><b>Frost wanted to wish you a happy birthday too.</b><small>meow</small></div>
+<audio id="songAudio" preload="metadata"></audio>
+<audio id="letterAudio" preload="none" src="assets/audio/Taylor Swift - Enchanted (Taylor's Version) (Lyric Video).mp3"></audio>
+<audio id="creditsAudio" preload="none" src="assets/audio/Kal chaudhvin ki raat thi Live HQ Ibn-e-Insha Jagjit Singh post HiteshGhazal - HiteshOshoMusic.mp3"></audio>
+<script src="script.js?v=16"></script></body></html>
